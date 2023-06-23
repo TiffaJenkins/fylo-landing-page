@@ -1,0 +1,41 @@
+//-------------Imports-------------
+@import './mixins';
+@import './header';
+@import './content';
+@import'./footer';
+
+
+//----------Genreal fixes----------
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+//----------Useful items-----------
+.row {
+    display: flex;
+
+    @include largeMobile {
+        @include rowStack;
+    }
+}
+
+.col {
+    flex: 1;
+    //border: $buildBorder;
+}
+
+.img-col {
+    flex: 1;
+    //border: $buildBorder;
+}
+
+.col-access-input {
+    flex: 1;
+    //border: $buildBorder;
+}

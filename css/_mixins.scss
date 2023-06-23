@@ -1,0 +1,112 @@
+//------------Variables--------------
+$mainFont: 'Raleway', sans-serif;
+$secondaryFont: 'Open sans', sans-serif;
+$mainH1Color: hsl(243, 87%, 12%);
+$earlyAccessSection: hsl(238, 22%, 44%);
+$accessSectionFontColor: hsl(240, 75%, 98%);
+$footerPColor: hsl(0, 0%, 75%);
+$mainBtnColor: hsl(224, 93%, 58%);
+$LinkColor: hsl(170, 45%, 43%);
+$reg: 400;
+$semiBold: 500;
+$bold: 600;
+$extraBold: 700;
+$centerContainer: 0 auto;
+$getRid: none;
+$buildBorder: 1px solid red;
+
+
+//------------Containers-------------
+@mixin mainContainer {
+    width: 90%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+@mixin cardContainer {
+    width: 85%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+@mixin mobileNavContainer {
+    width: 100%;
+    margin: $centerContainer;
+    //border: $buildBorder;
+}
+
+//-------useful layout stuff---------
+@mixin rowStack {
+    flex-direction: column;
+}
+
+@mixin flexSeperate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexAlignCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexJustCenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexJustifyEnd {
+    display: flex;
+    justify-content: end;
+}
+
+
+//--------responsive mixins----------
+@mixin fold {
+    @media (max-width: 338px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 395px) {
+        @content;
+    }
+}
+
+@mixin largeMobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin largeTablet {
+    @media (max-width: 996px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin largeLaptop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1388px) {
+        @content;
+    }
+}

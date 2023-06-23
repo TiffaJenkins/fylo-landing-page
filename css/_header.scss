@@ -1,0 +1,445 @@
+//--------------Main Header--------------
+//----Navbar----
+header {
+    padding: 40px 0 200px 0;
+    //border: $buildBorder;
+
+    @include largeMobile {
+        @include mobileNavContainer;
+        padding: 0 0 120px 0;
+    }
+
+    @include large {
+        padding: 50px 0 220px 0;
+    }
+
+    .main-container {
+        @include mainContainer;
+
+        .navbar {
+            @include flexSeperate;
+            position: relative; //for burger
+            overflow: hidden;
+            padding: 0 0 55px 0;
+            //border: $buildBorder;
+
+            @include largeMobile {
+                padding: 20px 0 20px 0;
+                position: fixed;
+                top: 0;
+                width: 89.5%;
+                background-color: transparent;
+                backdrop-filter: blur(10px);
+                border-radius: 4px;
+                z-index: 2;
+            }
+
+            @include large {
+                padding: 0 0 60px 0;
+            }
+
+            //----mobile burger----
+            .toggle-button {
+                position: absolute;
+                top: 24px; //keep checking--------------------
+                right: 0;
+                display: $getRid;
+                width: 40px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                transition: all 0.5s ease-in-out;
+                //border: $buildBorder;
+
+                @include fold {
+                    top: 19px;
+                }
+
+                @include largeMobile {
+                    display: flex;
+                    margin-right: 20px;
+
+                    .toggle-button_burger {
+                        height: 3px;
+                        width: 100%;
+                        background-color: hsl(0, 0%, 0%);
+                        border-radius: 5px;
+                        transition: all 0.5s ease-in-out;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            height: 3px;
+                            width: 100%;
+                            background-color: hsl(0, 0%, 0%);
+                            border-radius: 5px;
+                            transition: al 0.5s ease-in-out;
+                            transform: translateY(-8px);
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            height: 3px;
+                            width: 100%;
+                            background-color:hsl(0, 0%, 0%);
+                            border-radius: 5px;
+                            transition: all 0.5s ease-in-out;
+                            transform: translateY(8px);
+                        }
+                    }
+
+                    //----Animation----
+                    &.open {
+
+                        .toggle-button_burger {
+                            transform: translateX(-50px);
+                            background: transparent;
+
+                            &::before {
+                                transform: rotate(45deg) translate(35px, -35px);
+                            }
+
+                            &::after {
+                                transform: rotate(-45deg) translate(35px, 35px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-logo {
+                display: block;
+                width: 15%;
+                //border: $buildBorder;
+
+                @include largeMobile {
+                    width: 30%;
+                    margin-left: 20px;
+                }
+            } 
+
+            .nav-menu {
+
+                ul {
+                    list-style: $getRid;
+                    display: flex;
+                    //border: $buildBorder;
+
+                    li {
+                        margin-left: 35px;
+
+                        @include large {
+                            margin-left: 50px;
+                        }
+
+                        a {
+                            text-decoration: $getRid;
+                            font-family: $mainFont;
+                            font-size: 12px;
+                            color: $mainH1Color;
+                            font-weight: $reg;
+                            //border: $buildBorder;
+
+                            &:hover {
+                                color:hsl(0, 0%, 0%);
+                            }
+
+                            @include large {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                @include largeMobile {
+                    display: $getRid;
+                }
+            }
+        }
+    }
+}
+
+//----Mobile nav----
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 70%;
+    min-height: 100vh;
+    z-index: 98;
+    display: flex;
+    margin-top: 70px;
+    padding: 90px 0 0 25px;
+    flex-direction: column;
+    transition: 0.5s;
+    box-shadow: -200px 0px 200px hsla(0, 3%, 15%, 0.927);
+    //border: $buildBorder;
+
+    a {
+        text-decoration: $getRid;
+        font-family: $mainFont;
+        font-size: 20px;
+        font-weight: $semiBold;
+        color: $mainH1Color;
+        margin-bottom: 30px;
+        width: 50%;
+        //border: $buildBorder;
+
+        &:hover {
+            color: hsl(0, 0%, 0%);
+        }
+    }
+
+    .mobnav-icon-div {
+        margin-top: 60px;
+        //border: $buildBorder;
+
+        i {
+            font-size: 22px;
+            color: $mainBtnColor;
+            margin-right: 12px;
+        }
+    }
+}
+
+.mobile-nav.active {
+
+    @include largeMobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        min-height: 100vh;
+        display: flex;
+        z-index: 98;
+        background-color: $accessSectionFontColor;
+        margin-top: 70px;
+        padding: 90px 0 0 25px;
+        flex-direction: column;
+        //border: $buildBorder;
+
+        a {
+            text-decoration: $getRid;
+            font-family: $mainFont;
+            font-size: 20px;
+            font-weight: $semiBold;
+            color: $mainH1Color;
+            margin-bottom: 30px;
+            width: 50%;
+            //border: $buildBorder;
+
+            &:hover {
+                color: hsl(0, 0%, 0%);
+            }
+        }
+    }
+}
+
+//----Main header----
+.main-container {
+    @include mainContainer;
+
+    @include largeMobile {
+        @include mainContainer;
+    }
+
+    .row {
+
+        @include largeMobile {
+            flex-direction: column-reverse;
+        }
+
+        .col {
+
+            .main-h1 {
+                font-family: $mainFont;
+                color: $mainH1Color;
+                font-size: 28px;
+                font-weight: $extraBold;
+                line-height: 38px;
+                margin-top: 50px;
+                //border: $buildBorder;
+
+                @include largeTablet {
+                    font-size: 25px;
+                    line-height: 32px;
+                }
+
+                @include largeMobile {
+                    text-align: center;
+                    font-family: $secondaryFont;
+                    font-size: 24px;
+                    font-weight: $extraBold;
+                    line-height: 34px;
+                    margin-top: 30px;
+                }
+
+                @include largeLaptop {
+                    font-size: 35px;
+                }
+
+                @include large {
+                    font-size: 38px;
+                    line-height: 50px;
+                    margin-top: 90px;
+                }
+            }
+
+            .main-p {
+                font-family: $secondaryFont;
+                color: $mainH1Color;
+                font-size: 14px;
+                font-weight: $reg;
+                //border: $buildBorder; 
+
+                @include largeTablet {
+                    line-height: 22px;
+                    width: 90%;
+                }
+
+                @include largeMobile {
+                    text-align: center;
+                    line-height: 20px;
+                    fomt-weight: $semiBold;
+                    margin: $centerContainer;
+                    padding-bottom: 22px;
+                }
+
+                @include largeLaptop {
+                    font-size: 16px;
+                    width: 95%;
+                }
+
+                @include large {
+                    width: 90%;
+                    font-size: 17px;
+                }
+            }
+
+            form {
+                position: relative;
+
+                .form-div {
+                    @include flexAlignCenter;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        display: block;
+                        text-align: center;
+                    }
+    
+                    input {
+                        display: inline-block;
+                        padding: 6px 0 6px 10px;
+                        width: 56%;
+                        border-radius: 2px;
+
+                        @include largeMobile {
+                            width: 90%;
+                            padding: 11px 0 11px 14px;
+                        }
+
+                        @include large {
+                            width: 50%;
+                            padding: 10px 0 10px 15px;
+                        }
+
+                        //red border around input----
+                        &.error {
+                            border: 1.5px solid red;
+                        }
+        
+                        &::placeholder {
+                            font-size: 10px;
+                            color: rgb(220, 208, 208);
+                            letter-spacing: 1px;
+
+                            @include largeMobile {
+                                font-size: 11px;
+                            }
+
+                            @include large {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+        
+                    .header-btn {
+                        display: inline-block;
+                        cursor: pointer;
+                        padding: 9px 45px 9px 45px;
+                        background-color: $mainBtnColor;
+                        font-family: $mainFont;
+                        font-size: 11px;
+                        font-weight: $extraBold;
+                        border-radius: 2px;
+                        outline: none;
+                        border: $getRid;
+                        margin-left: 10px;
+                        color: hsl(100, 100%, 100%);
+                        box-shadow: 0 5px 5px 1px hsla(0, 3%, 15%, 0.244);
+    
+                        &:hover {
+                            background-color: hsla(225, 42%, 50%, 0.845);
+                        }
+
+                        @include largeTablet {
+                            font-size: 10px;
+                            padding: 9px 38px 9px 38px;
+                        }
+
+                        @include largeMobile {
+                            width: 90%;
+                            font-size: 14px;
+                            padding-top: 12px;
+                            padding-bottom: 12px;
+                            margin: 14px 0 0 0;
+                        }
+
+                        @include large {
+                            font-size: 13px;
+                            padding: 12px 55px 12px 55px; 
+                            margin-left: 15px;
+                        }
+                    }
+                }    
+                
+                .error-box {
+                    display: $getRid;
+                    position: absolute;
+                    top: 32px;
+                    margin-left: 12px;
+                    //border: $buildBorder;
+    
+                    @include largeMobile {
+                        top: 40px;
+                        margin-left: 30px;
+                    }
+    
+                    &.show {
+                        display: block;
+                    }
+    
+                    .error-p {
+                        font-family: $secondaryFont;
+                        font-size: 8px;
+                        font-weight: $extraBold;
+                        color: rgb(241, 100, 100);
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .col {
+
+            .header-img {
+                width: 100%;
+
+                @include largeMobile {
+                    margin-top: 80px;
+                }
+            }
+        }
+    }
+}

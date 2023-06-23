@@ -1,0 +1,430 @@
+//-----------Main content-----------
+.stay-productive-section {
+    background-color: hsla(240, 80%, 98%, 0.829);
+    position: relative;
+    padding: 50px 0 100px 0;
+
+    .section1-bg {
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+    }
+
+    .main-container {
+        @include mainContainer;
+
+        .row {
+
+            .col {
+
+                .stay-productive-h1 {
+                    font-family: $mainFont;
+                    color: $mainH1Color;
+                    font-size: 27px;
+                    font-weight: $extraBold;
+                    line-height: 38px;
+                    margin-top: 0;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        text-align: center;
+                        font-size: 16px;
+                    }
+
+                    @include fold {
+                        font-size: 14px;
+                    }
+
+                    @include largeLaptop {
+                        font-size: 30px;
+                    }
+
+                    @include large {
+                        font-size: 38px;
+                        line-height: 50px;
+                    }
+
+                }
+
+                .stay-productive-p {
+                    font-family: $secondaryFont;
+                    color: $mainH1Color;
+                    font-size: 11px;
+                    font-weight: $reg;
+                    max-width: 80%; 
+                    //border: $buildBorder; 
+
+                    @include largeTablet {
+                        font-size: 12px;
+                    }
+
+                    @include largeMobile {
+                        font-size: 15px;
+                        min-width: 100%;
+                    }
+
+                    @include largeLaptop {
+                        font-size: 14px;
+                    }
+
+                    @include large {
+                        width: 90%;
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .fylo-link-div {
+                    display: flex;
+                    padding-bottom: 30px;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        justify-content: center;
+                        padding-top: 20px;
+                        padding-bottom: 35px;
+                    }
+
+                    @include large {
+                        padding-bottom: 36px;
+                    }
+
+                    .fylo-link {
+                        cursor: pointer;
+                        padding-bottom: 3px;
+                        border-bottom: 1.5px solid $LinkColor;
+                        font-family: $secondaryFont;
+                        font-size: 11px;
+                        color: $LinkColor;
+                        font-weight: $semiBold;
+                        margin-right: 5px;
+
+                        &:hover {
+                            color: hsla(170, 45%, 43%, 0.502);
+                        }
+
+                        @include largeMobile {
+                            font-size: 13px;
+                            margin-right: 6px;
+                        }
+
+                        @include large {
+                            font-size: 15px;
+                            margin-right: 4px;
+                        }
+                    }
+    
+                    .fylo-arrow {
+                        width: 3.5%;
+                        height: 3.5%;
+                        //border: $buildBorder;
+
+                        @include largeTablet {
+                            margin-top: 3px;
+                        }
+
+                        @include largeMobile {
+                            width: 4.8%;
+                        }
+
+                        @include large {
+                            width: 3%;
+                            height: 3%;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+
+                .quote-card {
+                    background-color: hsl(100, 100%, 100%);
+                    width: 55%;
+                    box-shadow: 0px 0px 6px 3px hsla(0, 2%, 19%, 0.333);
+                    padding: 20px 0 20px 0;
+                    //border: $buildBorder; 
+
+                    @include largeTablet {
+                        width: 65%;
+                    }
+
+                    @include largeMobile {
+                        width: 90%;
+                        margin: $centerContainer;
+                    }
+
+                    @include large {
+                        width: 53.5%;
+                        padding: 26px 0 26px 0;
+                    }
+
+                    .card-container {
+                        @include cardContainer;
+
+                        .quote-icon {
+                            display: block;
+                            //border: $buildBorder;
+                        }
+
+                        .quote-p {
+                            font-family: $secondaryFont;
+                            font-size: 10px;
+                            line-height: 15px;
+                            color: $mainH1Color;
+                            font-weight: $semiBold;
+                            margin-bottom: 10px;
+                            //border: $buildBorder;
+
+                            @include largeMobile {
+                                font-size: 11px;
+                                line-height: 18px;
+                                font-weight: $bold;
+                                margin-bottom: 15px;
+                            }
+
+                            @include large {
+                                font-size: 13.5px;
+                                line-height: 22px;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .quote-div {
+                            display: flex;
+                            //border: $buildBorder;
+
+                            .quote-div-img {
+                                width: 12%;
+                                height: 12%;
+                                border-radius: 50%;
+                                //border: $buildBorder;
+                            }
+
+                            .quote-info-div {
+                                @include flexJustCenter;
+                                flex-direction: column;
+                                margin-left: 5px;
+                                //border: $buildBorder;
+
+                                @include large {
+                                    margin-left: 8px;
+                                }
+
+                                .quote-info-h5 {
+                                    font-family: $mainFont;
+                                    font-weight: $extraBold;
+                                    font-size: 8px;
+                                    letter-spacing: 0.25px;
+                                    color: $mainH1Color;
+                                    margin: 0;
+                                    //border: $buildBorder;
+
+                                    @include largeMobile {
+                                        font-size: 10px;
+                                    }
+
+                                    @include large {
+                                        font-size: 11px;
+                                    }
+                                }
+
+                                .quote-info-p {
+                                    font-family: $secondaryFont;
+                                    font-weight: $semiBold;
+                                    font-size: 6px;
+                                    color: $mainH1Color;
+                                    margin: 2px 0 0 0;
+                                    //border: $buildBorder;
+
+                                    @include largeMobile {
+                                        font-size: 7px;
+                                    }
+
+                                    @include large {
+                                        font-size: 8px;
+                                        margin: 3px 0 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .img-col {
+                text-align: right;
+
+                @include largeMobile {
+                    text-align: center;
+                }
+
+                .stay-productive-img {
+                    display: inline-block;
+                    width: 90%;
+                    margin-right: $centerContainer;
+                    padding-top: 20px;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        width: 90%;
+                        padding-top: 0;
+                        padding-bottom: 70px;
+                    }
+
+                    @include large {
+                        width: 85%;
+                        padding-top: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.early-access-section {
+    background-color: $earlyAccessSection;
+    padding: 65px 0 50px 0;
+
+    @include largeMobile {
+        padding: 60px 0 70px 0;
+    }
+
+    .main-container {
+        @include mainContainer;
+
+        .row {
+            
+            @include largeMobile {
+                flex-direction: column;
+            }
+
+            .col {
+
+                .early-access-h1 {
+                    font-family: $mainFont;
+                    font-size: 23px;
+                    color: $accessSectionFontColor;
+                    font-weight: $bold;
+                    margin-bottom: 14px; 
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        text-align: center;
+                        font-size: 20px;
+                        margin-top: 0;
+                    }
+
+                    @include largeLaptop {
+                        font-size: 25px;
+                    }
+
+                    @include large {
+                        font-size: 30px;
+                    }
+                }
+
+                .early-access-p {
+                    font-family: $secondaryFont;
+                    font-size: 12px;
+                    color: $accessSectionFontColor;
+                    line-height: 18px;
+                    width: 85%;
+                    margin-top: 0;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 24px;
+                        width: 100%;
+                        padding: 5px;
+                    }
+
+                    @include largeLaptop {
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+
+                    @include large {
+                        font-size: 15px;
+                        line-height: 22px;
+                        max-width: 75%;
+                    }
+                }
+            }
+
+            .col-access-input {
+                @include flexAlignCenter;
+                @include flexJustifyEnd;
+
+                @include largeMobile {
+                    @include flexJustCenter;
+                }
+
+                form {
+                    position: relative;
+
+                    @include largeMobile {
+                        width: 80%;
+                    }
+                    
+                    @include large {
+                        width: 75%;
+                    }
+
+                    .early-access-form-div {
+                        //border: $buildBorder;
+
+                        input {
+                            width: 100%;
+                            padding: 9px 0 9px 12px;
+                            border-radius: 2px;
+
+                            @include large {
+                                padding: 15px 0 15px 18px;
+                            }
+
+                            &::placeholder {
+                                font-size: 10px;
+                                color: rgb(220, 208, 208);
+
+                                @include large {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        .early-access-btn {
+                            cursor: pointer;
+                            padding: 10px 25px 10px 25px;
+                            background-color: $mainBtnColor;
+                            font-family: $mainFont;
+                            font-size: 10px;
+                            font-weight: $extraBold;
+                            border-radius: 2px;
+                            outline: none;
+                            border: $getRid;
+                            color: hsl(100, 100%, 100%);
+                            box-shadow: 0 5px 5px 1px hsla(0, 3%, 15%, 0.244);
+                            margin-top: 12px;
+
+                            @include largeMobile {
+                                width: 100%;
+                                font-size: 11px;
+                                padding: 11px 25px 11px 25px;
+                            }
+
+                            @include large {
+                                padding: 15px 32px 15px 32px;
+                                font-size: 13px;
+                                margin-top: 14px;
+                            }
+
+                            &:hover {
+                                background-color: hsla(225, 42%, 50%, 0.845);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

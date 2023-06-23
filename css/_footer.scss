@@ -1,0 +1,207 @@
+//----------------Footer------------------
+footer {
+    background-color: hsl(239, 66%, 15%);
+    padding: 60px 0 35px 0;
+
+    @include largeMobile {
+        padding: 60px 0 50px 0;
+    }
+
+    @include large {
+        padding: 90px 0 50px 0;
+    }
+
+    .main-container {
+        @include mainContainer;
+
+        .row {
+
+            @include largeMobile {
+                flex-direction: column;
+            }
+
+            .col {
+
+                .footer-logo {
+                    filter: invert(100%) brightness(100%) saturate(0%);
+                    width: 55%;
+                    margin-bottom: 10px;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        width: 58%;
+                        margin-bottom: 25px;
+                    }
+
+                    @include large {
+                        width: 52%;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .phone-div {
+                    @include flexAlignCenter;
+                    margin-bottom: 10px;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        margin-bottom: 18px;
+                    }
+
+                    @include large {
+                        margin-bottom: 15px;
+                    }
+
+                    .info-icon {
+                        display: inline-block;
+                        width: 6%;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            width: 7%;
+                        }
+                    }
+
+                    .footer-p {
+                        display: inline-block;
+                        font-family: $secondaryFont;
+                        font-size: 11px;
+                        color: $accessSectionFontColor;
+                        margin: 0;
+                        padding-left: 10px;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 16px;
+                            padding-left: 15px;
+                        }
+
+                        @include large {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .mail-div {
+                    @include flexAlignCenter;
+                    //border: $buildBorder;
+
+                    .info-icon {
+                        display: inline;
+                        width: 6%;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            width: 7%;
+                        }
+                    }
+
+                    .footer-p {
+                        display: inline;
+                        font-family: $secondaryFont;
+                        font-size: 11px;
+                        color: $accessSectionFontColor;
+                        margin: 0;
+                        padding-left: 10px;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 16px;
+                            padding-left: 15px;
+                        }
+
+                        @include large {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .col {
+
+                .footer-ul-div {
+                    margin-top: 50px;
+                    //border: $buildBorder;
+
+                    @include large {
+                        margin-top: 68px;
+                    }
+
+                    ul {
+                        list-style: $getRid;
+
+                        @include largeMobile {
+                            padding-left: 0;
+                        }
+    
+                        li {
+                            margin-bottom: 8px;
+
+                            @include largeMobile {
+                                margin-bottom: 14px;
+                            }
+
+                            @include large {
+                                margin-bottom: 12px;
+                            }
+    
+                            a {
+                                font-family: $secondaryFont;
+                                font-size: 11px;
+                                color: $accessSectionFontColor;
+                                text-decoration: $getRid;
+                                cursor: pointer;
+                                //border: $buildBorder;
+
+                                @include largeMobile {
+                                    font-size: 15px;
+                                }
+
+                                @include large {
+                                    font-size: 14px;
+                                }
+
+                                &:hover {
+                                    color: hsl(240, 28%, 22%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col {
+
+                .icon-div {
+                    margin-top: 50px;
+                    //border: $buildBorder;
+
+                    @include largeMobile {
+                        margin-top: 30px;
+                        @include flexJustCenter;
+                    }
+
+                    @include large {
+                        margin-top: 65px;
+                    }
+
+                    i {
+                        font-size: 18px;
+                        color: $accessSectionFontColor;
+                        margin-right: 5px;
+                        //border: $buildBorder;
+
+                        @include largeMobile {
+                            font-size: 22px;
+                            margin-right: 10px;
+                        }
+
+                        @include large {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
